@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for Engineering College - Complete your application online">
+    <title>Student Registration - Engineering College</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Fixed Top Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Engineering College</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About & Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admissions.html">Admissions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="student-life.html">Student Life</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active btn btn-light text-primary ms-lg-2" aria-current="page" href="registration.html">Register Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Student Registration</h1>
+            <p class="lead">Begin your journey at Engineering College</p>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="alert alert-info mb-4" role="alert">
+                                <strong>Important:</strong> All fields marked with <span class="text-danger">*</span> are required. Please ensure all information is accurate before submitting.
+                            </div>
+
+                            <form id="registrationForm" novalidate>
+                                <!-- Personal Information Section -->
+                                <h2 class="h4 mb-4 pb-2 border-bottom">Personal Information</h2>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="fullName" name="fullName" required minlength="2">
+                                        <div class="invalid-feedback">Please enter your full name (at least 2 characters).</div>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" 
+                                               pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}" required>
+                                        <div class="invalid-feedback">Please enter a valid phone number (e.g., 555-123-4567).</div>
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <small class="form-text text-muted">Format: 555-123-4567</small>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="dateOfBirth" class="form-label">Date of Birth <span class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                                        <div class="invalid-feedback">Please enter your date of birth.</div>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
+
+                                <!-- Academic Information Section -->
+                                <h2 class="h4 mb-4 pb-2 border-bottom mt-4">Academic Information</h2>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="desiredProgram" class="form-label">Desired Program <span class="text-danger">*</span></label>
+                                        <select class="form-select" id="desiredProgram" name="desiredProgram" required>
+                                            <option value="">Select a program...</option>
+                                            <optgroup label="Undergraduate Programs">
+                                                <option value="bsc-cs">B.Sc. Computer Science & Engineering</option>
+                                                <option value="bsc-me">B.Sc. Mechanical Engineering</option>
+                                                <option value="bsc-ee">B.Sc. Electrical Engineering</option>
+                                                <option value="bsc-ce">B.Sc. Civil Engineering</option>
+                                                <option value="bsc-che">B.Sc. Chemical Engineering</option>
+                                            </optgroup>
+                                            <optgroup label="Graduate Programs">
+                                                <option value="msc-cs">M.Sc. Computer Science</option>
+                                                <option value="msc-me">M.Sc. Mechanical Engineering</option>
+                                                <option value="msc-ee">M.Sc. Electrical Engineering</option>
+                                            </optgroup>
+                                        </select>
+                                        <div class="invalid-feedback">Please select your desired program.</div>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="intendedIntake" class="form-label">Intended Intake <span class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" id="intendedIntake" name="intendedIntake" required>
+                                        <div class="invalid-feedback">Please select your intended intake date.</div>
+                                        <div class="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Study Mode <span class="text-danger">*</span></label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="studyMode" id="fullTime" value="fulltime" required>
+                                        <label class="form-check-label" for="fullTime">
+                                            Full-time (Daytime classes, 12-18 credits per semester)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="studyMode" id="partTime" value="parttime" required>
+                                        <label class="form-check-label" for="partTime">
+                                            Part-time (Evening/weekend classes, 6-11 credits per semester)
+                                        </label>
+                                    </div>
+                                    <div class="invalid-feedback d-block" id="studyModeError" style="display: none !important;">
+                                        Please select a study mode.
+                                    </div>
+                                </div>
+
+                                <!-- Optional Field -->
+                                <div class="mb-3">
+                                    <label for="scholarshipInterest" class="form-label">Scholarship Interest (Optional)</label>
+                                    <select class="form-select" id="scholarshipInterest" name="scholarshipInterest">
+                                        <option value="">Not interested</option>
+                                        <option value="merit">Merit-based Scholarship</option>
+                                        <option value="need">Need-based Grant</option>
+                                        <option value="athletic">Athletic Scholarship</option>
+                                        <option value="research">Research Assistantship</option>
+                                    </select>
+                                    <small class="form-text text-muted">Optional: Select if you'd like to be considered for financial aid.</small>
+                                </div>
+
+                                <!-- Security Section -->
+                                <h2 class="h4 mb-4 pb-2 border-bottom mt-4">Account Security</h2>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+                                        <input type="password" class="form-control" id="password" name="password" 
+                                               required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                                        <div class="invalid-feedback">
+                                            Password must be at least 8 characters and contain uppercase, lowercase, and numbers.
+                                        </div>
+                                        <div class="valid-feedback">Strong password!</div>
+                                        <small class="form-text text-muted">Must contain at least 8 characters, one uppercase, one lowercase, and one number.</small>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="confirmPassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                                        <div class="invalid-feedback" id="confirmPasswordError">
+                                            Passwords do not match.
+                                        </div>
+                                        <div class="valid-feedback">Passwords match!</div>
+                                    </div>
+                                </div>
+
+                                <!-- Terms and Conditions -->
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                        <label class="form-check-label" for="agreeTerms">
+                                            I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a> and <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a> <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            You must agree to the terms and conditions before submitting.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg">Submit Registration</button>
+                                    <button type="reset" class="btn btn-outline-secondary">Reset Form</button>
+                                </div>
+
+                                <!-- Success/Error Messages -->
+                                <div id="registrationFormMessage" class="mt-4" style="display: none;"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title h5" id="termsModalLabel">Terms and Conditions</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="h6">1. Acceptance of Terms</h4>
+                    <p>By registering with Engineering College, you agree to comply with all institutional policies and regulations.</p>
+                    
+                    <h4 class="h6">2. Accuracy of Information</h4>
+                    <p>You certify that all information provided in this registration is true, complete, and accurate.</p>
+                    
+                    <h4 class="h6">3. Academic Integrity</h4>
+                    <p>You agree to uphold the highest standards of academic integrity and ethical conduct.</p>
+                    
+                    <h4 class="h6">4. Financial Obligations</h4>
+                    <p>You understand and accept responsibility for all tuition and fees associated with your enrollment.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title h5" id="privacyModalLabel">Privacy Policy</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="h6">Information Collection</h4>
+                    <p>We collect personal information necessary for admission and enrollment purposes only.</p>
+                    
+                    <h4 class="h6">Data Usage</h4>
+                    <p>Your information will be used solely for academic administration and will not be shared with third parties without consent.</p>
+                    
+                    <h4 class="h6">Data Security</h4>
+                    <p>We employ industry-standard security measures to protect your personal information.</p>
+                    
+                    <h4 class="h6">Your Rights</h4>
+                    <p>You have the right to access, modify, or request deletion of your personal information at any time.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Engineering College</h5>
+                    <p class="text-muted">Empowering future engineers since 1985</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2025 Engineering College. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
